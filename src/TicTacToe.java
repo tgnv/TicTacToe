@@ -1,8 +1,10 @@
+package net.tgnv.Khasang;
+
 import java.util.Random;
 
 public class TicTacToe {
 
-    public static int field[] = new int[9];
+    private static int field[] = new int[9];
 
     enum round {PLAYER1, PLAYER2}
 
@@ -35,7 +37,7 @@ public class TicTacToe {
         }
     }
 
-    public static void drawPlayBoard() {
+    private static void drawPlayBoard() {
         System.out.print("\u001b[1;1H"); // Erase entire window
 
         System.out.println(figure(field[0]) + " | " + figure(field[1]) + " | " + figure(field[2]));
@@ -45,7 +47,7 @@ public class TicTacToe {
         System.out.println(figure(field[6]) + " | " + figure(field[7]) + " | " + figure(field[8]));
     }
 
-    public static char figure (int i) {
+    private static char figure(int i) {
         switch (i) {
             case 0 :
                 return ' ';
